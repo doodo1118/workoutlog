@@ -1,0 +1,168 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+
+/* font */
+@font-face { 
+    font-family: 'GmarketSansLight'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+*{
+    font-family: 'GmarketSansLight';
+}
+/* ~font */
+
+/* ==== */
+.textShadow{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.iconShadow{
+    color: white;
+    filter: drop-shadow(0px 0px 4px #4444dd);
+}
+.boxShadow{
+    box-shadow: 0px 70px 70px grey;
+}
+.log_backgroundColor_done{
+    background-image: radial-gradient(circle, rgb(255, 155, 155) 5%, white 70%);
+}
+.log_backgroundColor_done{
+    background-image: radial-gradient(circle, rgb(87, 181, 93) 5%, white 70%);
+}
+.log_backgroundColor_default{
+    background-image: radial-gradient(circle, rgb(162, 164, 166) 5%, white 70%);
+}
+/* === */
+.wrap{
+    height: 100%;
+}
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.state{
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 50px;
+    width: 100%;
+    z-index: 20;
+    background-color: white;
+    font-size: x-small;
+}
+.state__mainTimer{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+.state__intervalTimer{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners{
+    margin-top: 10%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-bottom: 10%;
+}
+.partners .partner{
+    margin-top: 30px;
+}
+.partner{
+    height: 300px;
+}
+.partner__header{
+    width: 100%;
+    position: static;
+    display: flex;
+    font-size: 0.8em;
+}
+.partner__menu{
+    color: lightgray;
+}
+.partner__menu:hover{
+    color: lightseagreen;
+}
+.partner__logsContainer{
+    height: 100%;
+}
+.logsContainer{
+    display: flex;
+    align-content: center;
+    overflow-x: scroll;
+}
+.log{
+    min-width: 80%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logger{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50px 50px;
+    justify-items: stretch;
+}
+.logger__inputWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.logger label{
+    text-align: center;
+}
+.logger__input{
+    text-align: center;
+    flex-grow: 1;
+}
+.logger__submitButton{
+    flex-grow: 1;
+    grid-column: 2 / 3;
+    align-items: center;
+    justify-items: center;
+    font-size: 2em;
+}
+
+.motion__name{
+    text-align: center;
+    font-size: 2em;
+}
+.timer{
+    text-align: center;
+}
+
+.userInterface_fixed{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    background-color: white;
+}
+.tipWrap{
+    text-align: center;
+    height: 20px;
+    font-size: 0.8em;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
