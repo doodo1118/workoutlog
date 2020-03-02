@@ -1,13 +1,10 @@
 import React from 'react';
 import LogsContainer from './LogsContainer';
 
-import {faCrosshairs} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
 class Me extends React.Component{
     
     render(){
-        const {logs} = this.props;
+        const {myLogs} = this.props;
 
         return(
             <div className="partner">
@@ -16,7 +13,7 @@ class Me extends React.Component{
                     <div className="partner__menuWrap">
                     </div>
                 </div>
-                <LogsContainer logs={logs}/>
+                <LogsContainer logs={myLogs}/>
             </div>
         )
     }

@@ -1,18 +1,27 @@
 import React from 'react';
 import convertMilliSecondsToMinuetesSeconds from '../utils/convertMilliSecondsToMinuetesSeconds';
 
+
+
 function State(props){
-    const {mainTimer, intervalTimer} = props;
-        
+    const {mainTimer, intervalTimer,startExercise, resetIntervalTimer, tick, setsCount: totalSets, volumeCount: totalVolume} = props;
+    function startExercises(){
+        startExercise(); setInterval(tick, 1000);
+    }
     return(
         <div className="state">
-            <div className="state__mainTimer">
+            <div className="state__mainTimer" onClick={startExercises} >
                 {convertMilliSecondsToMinuetesSeconds(mainTimer)}
             </div>
             <div className="state__progress">
-                <div className="accumulatedVolume"></div>
+                <div className="sets__volumeCounter">
+                    {totalVolume}
+                </div>
+                <div className="state__setsCounter">
+                    {totalSets}
+                </div>
             </div>
-            <div className="state__intervalTimer">
+            <div className="state__intervalTimer" onClick={resetIntervalTimer}>
                 {convertMilliSecondsToMinuetesSeconds(intervalTimer)}
             </div>
         </div>

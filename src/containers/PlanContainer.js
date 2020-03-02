@@ -1,15 +1,21 @@
-import State from '../components/State';
 import * as actions from '../actions';
+import Plan from '../components/Plan';
 
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state)=>({
+    //timer
+    intervalTimer : state.timer.intervalTimer,
+    
+    //partners
+    partnersData : state.partnersManager.partners,
+    totalVolume: state.partnersManager.totalVolume,
+    totalSets: state.partnersManager.totalSets,
+    totalTime: state.partnersManager.totalTime,
+
     //logs
     totalSets: state.logger.totalSets,
     totalVolume: state.logger.totalVolume,
-    //timer
-    mainTimer: state.timer.mainTimer,
-    intervalTimer: state.timer.intervalTimer,
 })
 
 const mapDispatchToProps = (dispatch)=>({
@@ -18,14 +24,11 @@ const mapDispatchToProps = (dispatch)=>({
         const now = Date.now();
         dispatch(actions.setMainTimer(now));
         dispatch(actions.resetIntervalTimer(now));
-    },
-    resetIntervalTimer : ()=>{
-        const now = Date.now();
-        dispatch(actions.resetIntervalTimer(now));
+        
     },
     tick: ()=>dispatch(actions.tick()),
 })
 
-const StateContainer = connect(mapStateToProps, mapDispatchToProps)(State);
+const PlanContainer = connect(mapStateToProps, mapDispatchToProps)(Plan);
 
-export default StateContainer;
+export default PlanContainer;

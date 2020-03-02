@@ -1,10 +1,17 @@
 import React from 'react';
-import Log from './log';
+
+//이름 나중에 바꾸는게 좋겠다..
+import Log from './Log';
 
 class LogsContainer extends React.Component{
+    moveToNext(){
+        setTimeout(()=>{
+            this.LogsContainer.scrollLeft += 322;
+        }, 800)
+    }
     render(){
-        console.log('logsContainer props : ', this.props);
-        const {logs, onDone} = this.props;
+        const {logs} = this.props;
+        //partners부터 내려온 logs
         const logComponents = logs.map((log, index)=><Log log={log} key={index}/>);
 
         return(

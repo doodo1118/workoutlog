@@ -1,30 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Motion from './Motion';
+import Performance from './Performance';
 import LoggerContainer from '../containers/LoggerContainer';
 
-class Log extends React.Component{
+function Log(props){
+    const [isDone, setDone] = useState(false);
+    const [motionName, setMotionName] = useState(props.log.motionName);
+    const [weight, setWeight] = useState(props.log.weight);
+    const [reps, setReps] = useState(props.log.reps);
+    const [time, setTime] = useState(props.log.time);
 
-    constructor(props){
-        super(props);
-        this.state = {isDone:false, };
+    function markAsCompleted(){
+        setDone(true);
     }
-    onDone = ()=>{
-        this.setState({
-            isDone: true,
-        })
+    function popMotionSearch(){
+        console.log();
     }
-    render(){
-        const {isDone} = this.state;
-        const {motionName, weight, reps, time} = this.props.log;
+    function changeMotion(newMotionName){
+        setMotionName(newMotionName);
+    }
+    function onChangePerformance(e){
+        switch(e.currentTarget.name){
+            case "weight":
+                setWeight(e.currentTarget.value);break;
+            case "reps":
+                setReps(e.currentTarget.value);break;
+            case "time":
+                setTime(e.currentTarget.value);break;
+            default:
+                break;
+        }
+    }
+    
+    return(
+        <div className={`log textShadow log_backgroundColor_default ${isDone?'log_backgroundColor_done':''}`}>
+            <Motion motionName={motionName} popMotionSearch={popMotionSearch} />
+            <Performance weight={weight} reps={reps} time={time} onChange={onChangePerformance}/>
+            
+            {/* 
+            지금 Log 컴포넌트 안에 partners로부터 내려온 logs랑 reducer의 myLogs둘다있음.
+            그냥 LoggerContainer만들고 state로 motionName이랑 performance 내역 보내주는게 더나을듯?
+            myLogs까지 받을 필요 없음. action만 받아오면 됨 
+            */}
+            <LoggerContainer markAsCompleted={markAsCompleted} motionName={motionName} weight={weight} reps={reps} time={time}/>
 
-        return(
-            <div className={`log textShadow log_backgroundColor_default ${isDone?'log_backgroundColor_done':''}`}>
-                <Motion motionName={motionName}/>
-                <LoggerContainer weight={weight} reps={reps} time={time} isDone={isDone} onDone={this.onDone}/>
-            </div>
-        )
-    }
+        </div>
+    )
+    
 }
+
 
 export default Log;

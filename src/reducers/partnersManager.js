@@ -1,12 +1,20 @@
 import * as types from '../actions/ActionTypes';
 
+const BACK = 'BACK';
 
 // /*
-    const examplePartners = 
+const examplePartners = 
     [
         {
-            id:'', 
+            routineId:'bongil', 
             userId:'bongil',
+            routineInfo:{
+                volume:5600,
+                time: 125402,
+                sets:30,
+                targetParts: `${BACK}`, 
+                date: Date.now(),
+            },
             logs:[
                 {
                     motionName:'DL',
@@ -30,8 +38,15 @@ import * as types from '../actions/ActionTypes';
             ]
         },
         {
-            id:'', 
+            routineId:'kkw', 
             userId:'kkw', 
+            routineInfo:{
+                volume:5600,
+                time: 125402,
+                sets:30,
+                targetParts: `${BACK}`, 
+                date: Date.now(),
+            },
             logs:[
                 {
                     motionName:'BP',
@@ -66,8 +81,15 @@ import * as types from '../actions/ActionTypes';
             ]
         },
         {
-            id:'', 
+            routineId:'hannzo', 
             userId:'hanzo', 
+            routineInfo:{
+                volume:5600,
+                time: 125402,
+                sets:30,
+                targetParts: `${BACK}`, 
+                date: Date.now(),
+            },
             logs:[
                 {
                     motionName:'PU',
@@ -78,8 +100,15 @@ import * as types from '../actions/ActionTypes';
             ]
         },
         {
-            id:'', 
+            routineId:'wldnd', 
             userId:'wldnd', 
+            routineInfo:{
+                volume:5600,
+                time: 125402,
+                sets:30,
+                targetParts: `${BACK}`, 
+                date: Date.now(),
+            },
             logs:[
                 {
                     motionName:'IBP',
@@ -90,8 +119,15 @@ import * as types from '../actions/ActionTypes';
             ]
         },
         {
-            id:'', 
+            routineId:'qhdrl', 
             userId:'qhdrl', 
+            routineInfo:{
+                volume:5600,
+                time: 125402,
+                sets:30,
+                targetParts: `${BACK}`, 
+                date: Date.now(),
+            },
             logs:[
                 {
                     motionName:'CR',
@@ -102,8 +138,15 @@ import * as types from '../actions/ActionTypes';
             ]
         },
         {
-            id:'', 
+            routineId:'dd', 
             userId:'dd', 
+            routineInfo:{
+                volume:5600,
+                time: 125402,
+                sets:30,
+                targetParts: `${BACK}`, 
+                date: Date.now(),
+            },
             logs:[
                 {
                     motionName:'CR',
@@ -114,15 +157,29 @@ import * as types from '../actions/ActionTypes';
             ]
         },
     ]
+
 // */ 
 const initialState = {
     partners : examplePartners,
+    
+    //아래 세개 객체로 묶기
+    totalVolume:0,
+    totalSets:0,
+    totalTime:0, 
+
+
 }
 
 function partnersManager(state = initialState, action){
     switch(action.type){
         case types.ADD_PARTNER:
-            return { ...state, partners : state.partners.concat(action.partnerId)};
+            return { 
+                ...state, 
+                partners : state.partners.concat(action.partnerId),
+                totalVolume : state.totalVolume + action.partnerId.routineInfo.volume,
+                totalSets : state.totalVolume + action.partnerId.routineInfo.sets,
+                totalTime : state.totalVolume + action.partnerId.routineInfo.time,
+            };
         case types.DELETE_PARTNER:
             return { ...state, };
         default:

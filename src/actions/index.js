@@ -47,10 +47,9 @@ export const syncWith = (partnerId, index)=>({
     partnerId,
     index,
 });
-export const focusOn = (partnerId, index)=>({
+export const focusOn = (routineId)=>({
     type: types.FOCUS_ON,
-    partnerId,
-    index,
+    routineId,
 })
 
 //state, myLogsContainer, partners
@@ -65,7 +64,4 @@ export const resetIntervalTimer = (now)=>({
 export const tick = ()=>({
     type: types.TICK,
     now:Date.now(),
-})
-export const startExercise = ()=>({
-    type: types.START_EXERCISE,
 })

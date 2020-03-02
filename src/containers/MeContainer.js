@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state)=>({
-    logs: state.logger.logs,
+    myLogs: state.logger.myLogs,
     userId: 'Me',
 })
 

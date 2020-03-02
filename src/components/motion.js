@@ -1,16 +1,15 @@
 import React from 'react';
 
-class Motion extends React.Component{
-    
-    render(){
-        const { motionName } = this.props;
-        return(
-            <div className="motion">
-                <div className="motion__name">{motionName}</div>
-            </div>
-        )
-    }
-    
+function Motion({motionName, popMotionSearch}){
+    return(
+        <div className="motion">
+            <div className="motion__name" onClick={popMotionSearch}>{motionName}</div>
+        </div>
+    )
 }
+    
+    
+        
+    
 
 export default Motion;
