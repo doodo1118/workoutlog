@@ -45,7 +45,7 @@ function FixedMenu(){
                 </div>}
                 {navigationBar==="lnb"&&   
                 <div className="menu__lnb">
-                    <div className="stop">
+                    <div className="stop" onClick={()=>{}}>
                         <FontAwesomeIcon icon={faStop}/>
                     </div>
                     {/* <div className="pause">

@@ -12,6 +12,7 @@ function Home(){
             <div className="search"></div>
             <div className="contents">
                 <div className="section">
+                    {/* routineItem */}
                     <div className="item">
                         <div className="item__info">
                             <div className="item__title">

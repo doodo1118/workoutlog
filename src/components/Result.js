@@ -4,10 +4,12 @@ import convertMilliSecondsToMinuetesSeconds from '../utils/convertMilliSecondsTo
 
 
 function Result(props){
-    const {myLogs, mainTimer, intervalTimer, totalSets, totalVolume} = props;
+    const {myLogs, mainTimer, totalSets, totalVolume} = props;
 
     function finishExercise(){
-
+        const dataToSend = {
+            // ajax -> myStatistics
+        }
     }
     return(
         <div className="result">
@@ -37,6 +39,9 @@ function Result(props){
             </div>
             <div className="finishButton" onClick={finishExercise}>
                 FINISH
+            </div>
+            <div className="closeResult" onClick={()=>{}}>
+
             </div>
         </div>
     )
