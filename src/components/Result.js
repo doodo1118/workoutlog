@@ -3,11 +3,10 @@ import convertMilliSecondsToMinuetesSeconds from '../utils/convertMilliSecondsTo
 
 
 
-function Result(props){
+function Overview(props){
     const {myLogs, mainTimer, totalSets, totalVolume} = props;
 
     function finishExercise(){
-
         if( window.confirm("sure?") ){
             const dataToSend = {
                 // ajax -> myStatistics
@@ -15,40 +14,32 @@ function Result(props){
         }
     }
     return(
-        <div className="result">
-            <div className="result__summary">
-                <div className="date">
-                    <div className="startedAt">
-                        {}
-                    </div>
-                    <div className="finishedAt">
-                        {}
-                    </div>
-                </div>
-                <div className="result__time">
+        <div className="overview">
+            <div className="overview__summary">
+                <div className="overview__time">
                     {mainTimer}
                 </div>
-                <div className="result__volume">
+                <div className="overview__volume">
                     {totalVolume}
                 </div>
-                <div className="result__sets">
+                <div className="overview__sets">
                     {totalSets}
                 </div>
             </div>
-            <div className="result__motions">
+            <div className="overview__motions">
                 PLACE FOR LOGS
                 <div className="motion_size_sm motion_chest">
                 </div>
             </div>
-            <div className="finishButton" onClick={finishExercise}>
+            <div className="overview__finish" onClick={finishExercise}>
                 FINISH
             </div>
-            <div className="closeResult" onClick={()=>{}}>
-
+            <div className="overview__close" onClick={()=>{}}>
+                
             </div>
         </div>
     )
 }
 
 
-export default Result;
+export default Overview;

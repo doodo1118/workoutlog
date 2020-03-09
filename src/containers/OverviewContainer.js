@@ -1,21 +1,24 @@
 import * as actions from '../actions';
-import Plan from '../components/Plan';
+import Overview from '../components/Overview';
 
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state)=>({
-    //timer
-    intervalTimer : state.timer.intervalTimer,
-    
+    //for Both
     //partners
     partnersData : state.partnersManager.partners,
     totalVolume: state.partnersManager.totalVolume,
     totalSets: state.partnersManager.totalSets,
     totalTime: state.partnersManager.totalTime,
-
     //logs
     totalSets: state.logger.totalSets,
     totalVolume: state.logger.totalVolume,
+
+    //for Result
+    //timer
+    mainTimer: state.timer.mainTimer,
+    intervalTimer: state.timer.intervalTimer,
+    myLogs: state.logger.myLogs,
 })
 
 const mapDispatchToProps = (dispatch)=>({
@@ -29,6 +32,6 @@ const mapDispatchToProps = (dispatch)=>({
     tick: ()=>dispatch(actions.tick()),
 })
 
-const PlanContainer = connect(mapStateToProps, mapDispatchToProps)(Plan);
+const OverviewContainer = connect(mapStateToProps, mapDispatchToProps)(Overview);
 
-export default PlanContainer;
+export default OverviewContainer;

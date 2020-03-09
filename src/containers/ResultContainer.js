@@ -1,4 +1,4 @@
-import Result from '../components/Result';
+import Overveiw from '../components/Overview';
 import * as actions from '../actions';
 
 import {connect} from 'react-redux';
@@ -16,6 +16,6 @@ const mapStateToProps = (state)=>({
 const mapDispatchToProps = (dispatch)=>({
 })
 
-const ResultContainer = connect(mapStateToProps, mapDispatchToProps)(Result);
+const OverviewContainer = connect(mapStateToProps, mapDispatchToProps)(Overveiw);
 
-export default ResultContainer;
+export default OverviewContainer;
