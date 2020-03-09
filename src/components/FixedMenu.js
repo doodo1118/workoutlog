@@ -4,7 +4,7 @@ import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 //naming...
-import GNB from './GNB';
+import GNB from '../pages/components/GNB';
 import ExerciseNB from './ExerciseNB';
 import UserIndexesContainer from '../containers/UserIndexesContainer';
 

@@ -6,7 +6,7 @@ import {
     Home,
     Exercise,
     SignIn,
-    MyPage,
+    UserPage,
 } from '../pages';
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
                 <Route exact path="/" component={Home}/>
                 <Route path="/exercise" component={Exercise}/>
                 <Route path="/signin" component={SignIn}/>
-                <Route path="/mypage/:id?" component={MyPage}/>
+                <Route path="/user/:id?" component={UserPage}/>
             </div>
         );
     }
