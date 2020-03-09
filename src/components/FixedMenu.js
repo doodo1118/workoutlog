@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 
-import {faChartBar, faCogs, faHome, faChevronLeft, faChevronRight, faStop, faPlus, faBars, faPause} from '@fortawesome/free-solid-svg-icons';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 //naming...
+import GNB from './GNB';
+import ExerciseNB from './ExerciseNB';
 import UserIndexesContainer from '../containers/UserIndexesContainer';
-
 
 function FixedMenu(){
     const [navigationBar, setNavigationBar] = useState('lnb');
-
 
     function toggleNavigationBar(){
         if(navigationBar==='lnb')
@@ -28,42 +28,10 @@ function FixedMenu(){
                 <div className="menu__toggleButton">
                     <FontAwesomeIcon icon={faBars} rotation={ navigationBar==='lnb'&&90 } onClick={toggleNavigationBar}/>
                 </div>
-                {navigationBar==="gnb"&& 
-                <div className="menu__gnb">
-                    <div className="home">
-                        <FontAwesomeIcon icon={faHome}/>
-                    </div>
-                    <div className="board">
-                        게시판
-                    </div>
-                    <div className="myStatistic">
-                        <FontAwesomeIcon icon={faChartBar}/>
-                    </div>
-                    <div className="setting">
-                        <FontAwesomeIcon icon={faCogs}/>
-                    </div>
-                </div>}
+                {navigationBar==="gnb"&&
+                <GNB />}
                 {navigationBar==="lnb"&&   
-                <div className="menu__lnb">
-                    <div className="stop" onClick={()=>{}}>
-                        <FontAwesomeIcon icon={faStop}/>
-                    </div>
-                    {/* <div className="pause">
-                        <FontAwesomeIcon icon={faPause}/>
-                    </div> */}
-                    <div className="logTemplate">
-                        <FontAwesomeIcon icon={faPlus}/>
-                    </div>
-                    <div className="logTemplate">
-                        <FontAwesomeIcon icon={faChevronLeft}/>
-                    </div>
-                    <div className="logTemplate">
-                        <FontAwesomeIcon icon={faChevronRight}/>
-                    </div>
-                </div>}
-                {/* <div className="autoSlide">
-                    auto
-                </div> */}
+                <ExerciseNB />}
             </div>
         </div>
     )

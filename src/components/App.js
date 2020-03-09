@@ -5,9 +5,8 @@ import {Route} from 'react-router-dom';
 import {
     Home,
     Exercise,
-    SignUp,
     SignIn,
-    UserPage,
+    MyPage,
 } from '../pages';
 
 class App extends Component {
@@ -15,9 +14,9 @@ class App extends Component {
         return (
             <div className="wrap">
                 <Route exact path="/" component={Home}/>
-                <Route path="/Exercise" component={Exercise}/>
-                <Route path="/SignUp" component={SignUp}/>
-                <Route path="/UserPage/:id?" component={UserPage}/>
+                <Route path="/exercise" component={Exercise}/>
+                <Route path="/signin" component={SignIn}/>
+                <Route path="/mypage/:id?" component={MyPage}/>
             </div>
         );
     }

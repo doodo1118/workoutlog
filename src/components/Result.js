@@ -7,8 +7,11 @@ function Result(props){
     const {myLogs, mainTimer, totalSets, totalVolume} = props;
 
     function finishExercise(){
-        const dataToSend = {
-            // ajax -> myStatistics
+
+        if( window.confirm("sure?") ){
+            const dataToSend = {
+                // ajax -> myStatistics
+            }
         }
     }
     return(
