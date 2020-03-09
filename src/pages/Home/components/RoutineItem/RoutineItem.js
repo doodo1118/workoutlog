@@ -4,6 +4,12 @@ import {faCheck, faBookmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 function RoutineItem(){
+    function onAddClick(){
+
+    }
+    function onBookmarkClick(){
+        
+    }
     return(
         <div className="item">
             <div className="item__content">
@@ -18,10 +24,10 @@ function RoutineItem(){
                 </div>
             </div>
             <div className="item__buttons">
-                <div className="item__button item__add item__add_state_active" onClick={}>
+                <div className="item__button item__add item__add_state_active" onClick={onAddClick}>
                     <FontAwesomeIcon icon={faCheck}/>
                 </div>
-                <div className="item__button item__bookmark item__bookmark_state_active" onClick={}>
+                <div className="item__button item__bookmark item__bookmark_state_active" onClick={onBookmarkClick}>
                     <FontAwesomeIcon icon={faBookmark}/>
                 </div>
             </div>
