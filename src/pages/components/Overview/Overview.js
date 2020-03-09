@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {faTimes } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import convertMilliSecondsToMinuetesSeconds from '../utils/convertMilliSecondsToMinuetesSeconds';
+import convertMilliSecondsToMinuetesSeconds from '../../utils/convertMilliSecondsToMinuetesSeconds';
 
 
 function Overview(props){

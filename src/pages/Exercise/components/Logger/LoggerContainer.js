@@ -1,5 +1,5 @@
-import * as actions from '../actions';
-import Logger from '../components/Logger';
+import * as actions from '../../../../actions';
+import Logger from './Logger';
 
 import {connect} from 'react-redux';
 

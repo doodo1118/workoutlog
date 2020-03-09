@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import {faChevronLeft, faChevronRight, faStop, faPlus } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import MotionBoard from './MotionBoard';
-import OverviewContainer from '../containers/OverviewContainer';
+import MotionBoard from '../MotionBoard';
+import Overview from '../../../components/Overview';
 
-function FixedMenu(){
+function ExerciseNB(){
     const [showMotionBoard, setShowMotionBoard] = useState(false);
     const [displayOverview, setDisplayOverview] = useState(false);
 
@@ -39,9 +39,9 @@ function FixedMenu(){
             {showMotionBoard&&
                 <MotionBoard />}
             {displayOverview&&
-                <OverviewContainer />}
+                <Overview />}
         </div>
     )
 }
 
-export default FixedMenu;
+export default ExerciseNB;

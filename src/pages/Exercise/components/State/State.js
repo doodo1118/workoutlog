@@ -1,5 +1,5 @@
 import React from 'react';
-import convertMilliSecondsToMinuetesSeconds from '../utils/convertMilliSecondsToMinuetesSeconds';
+import convertMilliSecondsToMinuetesSeconds from '../../../utils/convertMilliSecondsToMinuetesSeconds';
 
 
 

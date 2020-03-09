@@ -1,5 +1,5 @@
 import React from 'react';
-import LogsContainer from './LogsContainer';
+import LogsContainer from '../LogsContainer';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCrosshairs} from '@fortawesome/free-solid-svg-icons';
 

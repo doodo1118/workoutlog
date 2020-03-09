@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Motion from './Motion';
-import Performance from './Performance';
-import LoggerContainer from '../containers/LoggerContainer';
+import Motion from '../Motion';
+import Performance from '../Performance';
+import Logger from '../Logger';
 
 function Log(props){
     const [isDone, setDone] = useState(false);
@@ -43,7 +43,7 @@ function Log(props){
             그냥 LoggerContainer만들고 state로 motionName이랑 performance 내역 보내주는게 더나을듯?
             myLogs까지 받을 필요 없음. action만 받아오면 됨 
             */}
-            <LoggerContainer markAsCompleted={markAsCompleted} motionName={motionName} weight={weight} reps={reps} time={time}/>
+            <Logger markAsCompleted={markAsCompleted} motionName={motionName} weight={weight} reps={reps} time={time}/>
 
         </div>
     )

@@ -1,5 +1,5 @@
-import State from '../components/State';
-import * as actions from '../actions';
+import State from './State';
+import * as actions from '../../../../actions';
 
 import {connect} from 'react-redux';
 

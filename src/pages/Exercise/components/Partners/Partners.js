@@ -1,6 +1,6 @@
 import React from 'react';
-import Partner from './Partner';
-import MeContainer from '../containers/MeContainer';
+import Partner from '../Partner';
+import Me from '../Me';
 
 function hideFixedMenu(){
     let fixedMenu = document.getElementsByClassName("userInterface_fixed")[0];
@@ -35,7 +35,7 @@ class Partners extends React.Component{
                 // onScrollStop = setTimeout(hideFixedMenu, 1000);
             } }>
                 {partners}
-                <MeContainer/>
+                <Me/>
             </div>
         )
     }

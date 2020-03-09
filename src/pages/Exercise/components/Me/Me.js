@@ -1,5 +1,5 @@
 import React from 'react';
-import LogsContainer from './LogsContainer';
+import LogsContainer from '../LogsContainer';
 
 class Me extends React.Component{
     

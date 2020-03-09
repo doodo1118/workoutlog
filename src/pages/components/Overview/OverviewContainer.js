@@ -1,5 +1,5 @@
-import * as actions from '../actions';
-import Overview from '../components/Overview';
+import * as actions from '../../../actions';
+import Overview from './Overview';
 
 import {connect} from 'react-redux';
 

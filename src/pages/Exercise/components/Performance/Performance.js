@@ -1,6 +1,6 @@
 import React from 'react';
 
-import convertMilliSecondsToMinuetesSeconds from '../utils/convertMilliSecondsToMinuetesSeconds';
+import convertMilliSecondsToMinuetesSeconds from '../../../utils/convertMilliSecondsToMinuetesSeconds';
 
 function Performance({weight, reps, time, onChange}){
         

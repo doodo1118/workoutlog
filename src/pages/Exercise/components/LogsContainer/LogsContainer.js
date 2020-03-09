@@ -1,7 +1,7 @@
 import React from 'react';
 
 //이름 나중에 바꾸는게 좋겠다..
-import Log from './Log';
+import Log from '../Log';
 
 class LogsContainer extends React.Component{
     moveToNext(){

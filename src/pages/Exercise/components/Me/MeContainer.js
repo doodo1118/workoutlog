@@ -1,5 +1,5 @@
-import Me from '../components/Me';
-import * as actions from '../actions';
+import Me from './Me';
+import * as actions from '../../../../actions';
 
 import {connect} from 'react-redux';
 

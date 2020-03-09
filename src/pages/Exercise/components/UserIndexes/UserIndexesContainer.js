@@ -1,5 +1,5 @@
-import UserIndexes from '../components/UserIndexes';
-import * as actions from '../actions';
+import UserIndexes from './UserIndexes';
+import * as actions from '../../../../actions';
 
 import {connect} from 'react-redux';
 

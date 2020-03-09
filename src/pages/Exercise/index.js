@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 // import Counter from './Counter';
 // import CounterContainer from '../containers/CounterContainer';
 
-import OverviewContainer from '../../containers/ResultContainer';
-import StateContainer from '../../containers/StateContainer';
-import FixedMenu from '../../components/FixedMenu';
-import PartnersContainer from  '../../containers/PartnersContainer';
+import Overview from '../components/Overview';
+import State from './components/State';
+import FixedMenu from './components/FixedMenu';
+import Partners from  './components/Partners';
 
 class Exercise extends Component {
     render() {
         return (
             <div className="wrap">
-                <OverviewContainer />
-                <StateContainer />
-                <PartnersContainer partners={this.props.partners} />
+                <Overview />
+                <State />
+                <Partners partners={this.props.partners} />
                 <FixedMenu />
             </div>
         );

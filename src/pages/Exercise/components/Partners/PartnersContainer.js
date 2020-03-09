@@ -1,5 +1,5 @@
-import Partners from '../components/Partners';
-import * as actions from '../actions';
+import Partners from './Partners';
+import * as actions from '../../../../actions';
 
 import {connect} from 'react-redux';
 
@@ -19,3 +19,4 @@ const mapDispatchToProps = (dispatch)=>({
 const PartnersContainer = connect(mapStateToProps, mapDispatchToProps)(Partners);
 
 export default PartnersContainer;
+
